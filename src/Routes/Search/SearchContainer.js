@@ -12,8 +12,10 @@ export default class extends React.Component {
   };
 
   handleSubmit = (event) => {
+    console.log("hahah");
     event.preventDefault();
     const { searchTerm } = this.state;
+    console.log("hahah1");
 
     if (searchTerm !== "") {
       this.searchByTerm(searchTerm);
@@ -24,6 +26,9 @@ export default class extends React.Component {
     const {
       target: { value },
     } = event;
+    console.log(event.target);
+    console.log(value);
+    console.log(this.state.searchTerm);
     this.setState({ searchTerm: value });
   };
 
@@ -48,8 +53,8 @@ export default class extends React.Component {
 
   render() {
     const { movieResults, tvResults, searchTerm, loading, error } = this.state;
-    console.log({ movieResults });
-    console.log({ tvResults });
+    // console.log({ movieResults });
+    // console.log({ tvResults });
     return (
       <SearchPresenter
         movieResults={movieResults}

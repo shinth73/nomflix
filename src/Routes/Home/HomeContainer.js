@@ -13,10 +13,13 @@ export default class extends React.Component {
 
   async componentDidMount() {
     try {
+      let result = await moviesApi.nowPlaying();
+      console.log(result);
       const {
         data: { results: nowPlaying },
       } = await moviesApi.nowPlaying();
       console.log(nowPlaying);
+      console.log(typeof nowPlaying);
       const {
         data: { results: upcoming },
       } = await moviesApi.upcoming();
@@ -37,6 +40,7 @@ export default class extends React.Component {
 
   render() {
     const { nowPlaying, upcoming, popular, error, loading } = this.state;
+
     return (
       <HomePresenter
         nowPlaying={nowPlaying}
