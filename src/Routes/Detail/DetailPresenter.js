@@ -126,7 +126,7 @@ const DetailPresenter = ({ result, loading, error }) =>
                 : null}
             </Item>
             <Divider>•</Divider>
-            {console.log(result)}
+            {/* {console.log(result)} */}
             <Item>
               {result.runtime === 0
                 ? "?"

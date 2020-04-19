@@ -131,9 +131,11 @@ const SeasonContentContainer = styled.div`
 
 export default (props) => (
   <Tabs>
+    {console.log(props.result.imdb_id)}
     <TabList>
       <Tab>Videos</Tab>
-      <Tab>Movei Info / Season</Tab>
+      <Tab>Info</Tab>
+      {props.result.imdb_id ? null : <Tab>Seasons</Tab>}
     </TabList>
 
     <TabPanel>
@@ -186,6 +188,10 @@ export default (props) => (
             {props.result.homepage ? props.result.homepage : "None"}
           </HomePageLink>
         </HomePageContainer>
+      </InfoContainer>
+    </TabPanel>
+    <TabPanel>
+      <InfoContainer>
         <SeasonsContainer>
           {props.result.seasons &&
             props.result.seasons.map((season) =>
