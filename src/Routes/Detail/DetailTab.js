@@ -131,7 +131,6 @@ const SeasonContentContainer = styled.div`
 
 export default (props) => (
   <Tabs>
-    {console.log(props.result.imdb_id)}
     <TabList>
       <Tab>Videos</Tab>
       <Tab>Info</Tab>
