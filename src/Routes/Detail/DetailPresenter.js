@@ -72,12 +72,11 @@ const Overview = styled.p`
   font-size: 12px;
   opacity: 0.7;
   line-height: 1.5;
-  width: 50%;
+  width: 70%;
   margin-bottom: 30px;
 `;
 const Icon = styled.img`
   height: 25px;
-  margin-left: 8px;
   margin-bottom: -8px;
 `;
 const TabContainer = styled.div`
@@ -144,6 +143,7 @@ const DetailPresenter = ({ result, loading, error }) =>
                     : `${genre.name} / `
                 )}
             </Item>
+            {result.imdb_id ? <Divider>•</Divider> : null}
             <Item>
               {/* {console.log(result)} */}
               <a
