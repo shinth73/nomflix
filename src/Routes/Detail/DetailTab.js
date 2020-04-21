@@ -107,21 +107,23 @@ const SeasonPoster = styled.img`
 const SeasonTitle = styled.div`
   margin-top: 5px;
   opacity: 1;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 500;
 `;
 const SeasonAirdate = styled.div`
   margin-top: 5px;
-  opacity: 0.8;
+  opacity: 0.9;
   font-size: 10px;
 `;
 const SeasonEpisod = styled.div`
   margin-top: 5px;
-  opacity: 0.8;
+  opacity: 0.9;
   font-size: 10px;
 `;
 const SeasonOverview = styled.div`
   margin-top: 5px;
-  opacity: 0.8;
+  margin-right: 8px;
+  opacity: 0.9;
   font-size: 11px;
 `;
 const SeasonContentContainer = styled.div`
@@ -212,8 +214,8 @@ export default (props) => (
                     </SeasonEpisod>
                     <SeasonOverview>
                       Overview :
-                      {season.overview.length > 400
-                        ? `${season.overview.substring(0, 400)}...`
+                      {season.overview.length > 370
+                        ? `${season.overview.substring(0, 370)}...`
                         : season.overview}
                     </SeasonOverview>
                   </SeasonContentContainer>

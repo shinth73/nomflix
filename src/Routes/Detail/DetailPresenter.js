@@ -145,7 +145,7 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Item>
             {result.imdb_id ? <Divider>•</Divider> : null}
             <Item>
-              {/* {console.log(result)} */}
+              {console.log(result)}
               <a
                 href={
                   result.imdb_id
